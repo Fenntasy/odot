@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-lg-6">
+    <h4><%= gettext("List : %{name}", name: @name) %></h4>
+    <ul>
+      <%= Enum.map @tasks, fn task -> %>
+        <li>
+          <%= task["name"] %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
