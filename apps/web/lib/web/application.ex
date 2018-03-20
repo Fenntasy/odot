@@ -6,6 +6,7 @@ defmodule Web.Application do
 
     children = [
       supervisor(WebWeb.Endpoint, []),
+      supervisor(ElmReactor, [])
     ]
 
     opts = [strategy: :one_for_one, name: Web.Supervisor]
