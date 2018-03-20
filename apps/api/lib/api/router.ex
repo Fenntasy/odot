@@ -1,6 +1,7 @@
 defmodule API.Router do
   use Plug.Router
 
+  plug CORSPlug
   plug Plug.Logger
   plug Plug.Parsers, parsers: [:json], json_decoder: Poison
   plug :match
